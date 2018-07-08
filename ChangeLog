@@ -1,0 +1,57 @@
+2018-07-09  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.7
+    * Remove _ANSI_ARGS_
+
+2017-04-18  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.6
+    * Add License file
+    * Setup tcl min version from 8.1 to 8.4
+    * Update SUSE spec
+
+2016-12-14  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.5
+    * Update TEA files
+
+2016-02-26  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.4
+    * generic/tgumbo.c: Add more option check
+
+2016-02-20  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.3
+    * generic/tgumbo.c: Replace Tcl_GetString to Tcl_GetStringFromObj
+
+2015-11-13  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.2
+    * generic/tgumbo.c: Add a thread exit handler to delete
+      hash table.
+    * generic/tgumbo.c: Try to use ThreadSpecificData to
+      per thread hash table.
+
+2015-11-05  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.1
+    * generic/tgumbo.c: Update source code
+
+2014-12-07  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.1
+    * win/*.*:          Remove Visual Studio related files.
+
+2014-12-07  Danilo Chang <ray2501@gmail.com>
+
+    * tclgumbo.c:       Add Tclgumbo_Init function, add related variables.
+    * tgumbo.c:         Add hash table initial function.
+    * tests:            Add tclgumbo.test to do simple test.
+
+2014-12-06  Danilo Chang <ray2501@gmail.com>
+
+    * Initial:          Dump Sample extension files.
+    * Gumbo:            Get Gumbo 0.9.2 source files and setup configure.in.
+    * configure.in:     TEA_ADD_CFLAGS add -std=gnu99, for Gumbo used.
+
