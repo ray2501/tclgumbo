@@ -9,7 +9,7 @@ Release:       0
 License:       BSD-2-Clause
 Group:         Development/Libraries/Tcl
 Source:        %{name}-%{version}.tar.gz
-URL:           https://sites.google.com/site/ray2501/tclgumbo 
+URL:           https://github.com/ray2501/tclgumbo 
 BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: tcl-devel >= 8.4
