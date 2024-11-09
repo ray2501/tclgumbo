@@ -16,12 +16,12 @@ void Tclgunbo_Thread_Exit(ClientData clientdata)
 }
 
 
-int tcl_gumbo_parse (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_parse (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {    
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;    
     char *htmltext = NULL;
-    int len = 0;
+    Tcl_Size len = 0;
     char handleName[16 + TCL_INTEGER_SPACE];
     int newvalue;
     GumboOutput* output;    
@@ -61,11 +61,11 @@ int tcl_gumbo_parse (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Ob
 }
 
 
-int tcl_gumbo_destroy_output (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_destroy_output (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {    
     Tcl_HashEntry *hashEntryPtr;
     char *handle;
-    int len;
+    Tcl_Size len;
     GumboOutput* output;    
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
@@ -106,7 +106,7 @@ int tcl_gumbo_destroy_output (ClientData clientData, Tcl_Interp *interp, int obj
 }
 
 
-int tcl_gumbo_output_get_root (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_output_get_root (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;  
@@ -114,7 +114,7 @@ int tcl_gumbo_output_get_root (ClientData clientData, Tcl_Interp *interp, int ob
     GumboNode* root;
     char handleName[16 + TCL_INTEGER_SPACE];
     char *handle;
-    int len;
+    Tcl_Size len;
     int newvalue;
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
@@ -165,13 +165,13 @@ int tcl_gumbo_output_get_root (ClientData clientData, Tcl_Interp *interp, int ob
 }
 
 
-int tcl_gumbo_node_get_type (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_node_get_type (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;    
     GumboNode *node;
     char *handle;
-    int len;
+    Tcl_Size len;
     long nodetype;
 
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
@@ -217,13 +217,13 @@ int tcl_gumbo_node_get_type (ClientData clientData, Tcl_Interp *interp, int objc
 }
 
 
-int tcl_gumbo_element_get_tag_name (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_element_get_tag_name (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;    
     GumboNode *node;
     char *handle;
-    int len;
+    Tcl_Size len;
     const char *tag_name;
 
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
@@ -274,7 +274,7 @@ int tcl_gumbo_element_get_tag_name (ClientData clientData, Tcl_Interp *interp, i
 }
 
 
-int tcl_gumbo_element_get_children (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_element_get_children (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *listobj;  
@@ -282,7 +282,7 @@ int tcl_gumbo_element_get_children (ClientData clientData, Tcl_Interp *interp, i
     GumboNode *node;
     char handleName[16 + TCL_INTEGER_SPACE];
     char *handle;
-    int len;
+    Tcl_Size len;
     int newvalue;
 
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
@@ -343,13 +343,13 @@ int tcl_gumbo_element_get_children (ClientData clientData, Tcl_Interp *interp, i
 }
 
 
-int tcl_gumbo_text_get_text (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_text_get_text (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;    
     GumboNode *node;
     char *handle;
-    int len;
+    Tcl_Size len;
     const char *text;
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
@@ -396,13 +396,13 @@ int tcl_gumbo_text_get_text (ClientData clientData, Tcl_Interp *interp, int objc
 }
 
 
-int tcl_gumbo_element_get_attributes (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_element_get_attributes (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;    
     Tcl_Obj *returnvalue, *nameobj, *valueobj;    
     GumboNode *node;
     char *handle;
-    int len;
+    Tcl_Size len;
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
       Tcl_GetThreadData(&dataKey, sizeof(ThreadSpecificData));
@@ -454,13 +454,13 @@ int tcl_gumbo_element_get_attributes (ClientData clientData, Tcl_Interp *interp,
 }
 
 
-int tcl_gumbo_element_get_tag_open (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_element_get_tag_open (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;    
     GumboNode *node;
     char *handle;
-    int len;
+    Tcl_Size len;
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
       Tcl_GetThreadData(&dataKey, sizeof(ThreadSpecificData));
@@ -506,13 +506,13 @@ int tcl_gumbo_element_get_tag_open (ClientData clientData, Tcl_Interp *interp, i
 }
 
 
-int tcl_gumbo_element_get_tag_close (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *CONST obj[])
+int tcl_gumbo_element_get_tag_close (ClientData clientData, Tcl_Interp *interp, int objc, Tcl_Obj *const obj[])
 {
     Tcl_HashEntry *hashEntryPtr;
     Tcl_Obj *returnvalue;    
     GumboNode *node;
     char *handle;
-    int len;
+    Tcl_Size len;
     
     ThreadSpecificData *tsdPtr = (ThreadSpecificData *)
       Tcl_GetThreadData(&dataKey, sizeof(ThreadSpecificData));
