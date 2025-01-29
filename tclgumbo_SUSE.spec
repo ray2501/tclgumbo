@@ -4,7 +4,7 @@
 
 Name:          tclgumbo
 Summary:       Tcl interface for Gumbo library
-Version:       0.2.8
+Version:       0.2.9
 Release:       0
 License:       BSD-2-Clause
 Group:         Development/Libraries/Tcl

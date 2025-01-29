@@ -1,3 +1,7 @@
+2025-01-29  Danilo Chang <ray2501@gmail.com>
+
+    * Tclgumbo:         v0.2.9
+
 2024-11-09  Danilo Chang <ray2501@gmail.com>
 
     * Use Tcl_Size to replace int
